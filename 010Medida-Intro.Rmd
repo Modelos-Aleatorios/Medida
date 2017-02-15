@@ -1,0 +1,66 @@
+---
+title: "Teoría de la Medida"
+author: "Alexander A. Ramírez M. (alexanderramirez.me)"
+date: "13/2/2017"
+output:
+  pdf_document:
+    fig_caption: yes
+    includes:
+      in_header: styles.sty
+    keep_tex: yes
+    number_sections: yes
+    toc: yes
+    toc_depth: 4
+  html_document:
+    keep_md: yes
+    toc: yes
+    toc_depth: 4
+    toc_float:
+      collapsed: no
+      smooth_scroll: no
+  md_document:
+    toc: yes
+    toc_depth: 4
+    variant: markdown_github
+  github_document:
+    toc: yes
+    toc_depth: 4
+  word_document:
+    keep_md: yes
+    toc: yes
+    toc_depth: 4
+fontsize: 12pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+----
+
+**Nota**
+
+> Estos son mis apuntes y notas sobre Teoría de la Medida. Agradezco a Angie Pineda por permitirme asistir como oyente a su curso, además del repaso que hicimos en el curso de Probabilidades del Posgrado de Matemáticas de la UCV con el Profesor Ricardo Rios. Los errores son mios, agradezco cualquier corrección. Gracias Profesores.
+
+----
+
+
+# Introducción
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

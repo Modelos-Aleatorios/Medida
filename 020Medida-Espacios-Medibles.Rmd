@@ -1,0 +1,95 @@
+---
+title: "Teoría de la Medida"
+author: "Alexander A. Ramírez M. (alexanderramirez.me)"
+date: "13/2/2017"
+output:
+  pdf_document:
+    fig_caption: yes
+    includes:
+      in_header: styles.sty
+    keep_tex: yes
+    number_sections: no
+    toc: yes
+    toc_depth: 4
+  html_document:
+    keep_md: yes
+    toc: yes
+    toc_depth: 4
+    toc_float:
+      collapsed: no
+      smooth_scroll: no
+  md_document:
+    toc: yes
+    toc_depth: 4
+    variant: markdown_github
+  github_document:
+    toc: yes
+    toc_depth: 4
+  word_document:
+    keep_md: yes
+    toc: yes
+    toc_depth: 4
+fontsize: 12pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+----
+
+**Nota**
+
+> Estos son mis apuntes y notas sobre Teoría de la Medida. Agradezco a Angie Pineda por permitirme asistir como oyente a su curso, además del repaso que hicimos en el curso de Probabilidades del Posgrado de Matemáticas de la UCV con el Profesor Ricardo Rios. Los errores son mios, agradezco cualquier corrección. Gracias Profesores.
+
+----
+
+
+# 2. Espacios Medibles
+
+Partiendo de que la medida es una función sobre una clases de conjuntos, que cumplen ciertas condiciones, en los reales positivos $\bar{\mathbb{R}}^+\ $[^rmas]. En este apartado nos concentramos en definir dichas condiciones. 
+
+## 2.1. Clases de Conjuntos
+
+Sea $X$ un conjunto cualquiera. La clase de todos los subconjuntos de $X$, *partes* de $X$, la denotamos por $\mathcal{P}(X)$. Dadas dos clases de subconjuntos de $X$, $\mathcal{A}$ y $\mathcal{B}$, entonces
+$$
+\mathcal{A}\subseteq\mathcal{B}\Longleftrightarrow(A\in\mathcal{A}\Longrightarrow A\in\mathcal{B})
+$$
+donde $A$ es un conjunto cualquiera. Cabe notar que los elementos de $\mathcal{A}$ y $\mathcal{B}$ con conjuntos que también pertenecen a $\mathcal{P}(X)$.
+
+Por ejemplo si $X=\{cara,sello\}$, los resultados del lanzamiento de una moneda entonces $\mathcal{P}(X)=\{\emptyset,\{cara\},\{sello\},\{cara,sello\}\}$.
+
+```{r}
+
+```
+
+
+### 2.1.1 $\sigma$-álgebra
+
+Una clase de conjuntos $\mathcal{A}\subseteq \mathcal{P}(X)$ se llama $\sigma$-álgebra si
+
+1. $X\in\mathcal{A}$
+
+El espacio completo pertenece a la $\sigma$-álgebra.
+
+2. $A\in\mathcal{A}\Longleftrightarrow A^c\in\mathcal{A}$
+
+La $\sigma$-álgebra es cerrada bajo complemento. Es decir, que para todo elemento (conjunto) de la $\sigma$-álgebra, el complemento también pertenece a la $\sigma$-álgebra.
+
+3. $(A_n)_{n=1}^\infty\in\mathcal{A}\Longrightarrow\cup_{n=1}^\infty A_n\in\mathcal{A}$
+
+Finalmente la $\sigma$-álgebra es cerrada bajo uniones numerables[^numerable]. Es decir, que la unión de los 
+
+## 2.2. Clase Monótona
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+[^rmas]: $\bar{\mathbb{R}}^+=\mathbb{R}\cup\{\infty\}$ por otra parte $\bar{\mathbb{R}}=\mathbb{R}\cup\{-\infty\}\cup\{\infty\}$
+
+[^numerable]: Un conjunto $A_n$ se dice numerable cuando existe una biyección de $\mathbb{N}$ con $A_n$.
